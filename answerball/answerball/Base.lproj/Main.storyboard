@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="answerball" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="shake your phone to get answer!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KL3-Z4-sST">
+                                <rect key="frame" x="20" y="20" width="560" height="20"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magic8ball" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-6J-LGv">
+                                <rect key="frame" x="138" y="138" width="325" height="325"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="FGf-TX-Qas"/>
+                                    <constraint firstAttribute="width" constant="325" id="hx4-SI-oIF"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WU1-p3-sdJ">
+                                <rect key="frame" x="179" y="209" width="242" height="182"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="182" id="LqR-17-g8u"/>
+                                    <constraint firstAttribute="width" constant="242" id="Xid-CT-acK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ6-Jb-7dd">
+                                <rect key="frame" x="240" y="541" width="121" height="39"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Get Answer!"/>
+                                <connections>
+                                    <action selector="getAnswerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ttd-X0-h07"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="aQ6-Jb-7dd" secondAttribute="bottom" constant="20" symbolic="YES" id="1oU-Gn-TRA"/>
+                            <constraint firstItem="WU1-p3-sdJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3G9-Zj-zyp"/>
+                            <constraint firstItem="aQ6-Jb-7dd" firstAttribute="centerX" secondItem="WU1-p3-sdJ" secondAttribute="centerX" id="7Jf-RA-tEf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="KL3-Z4-sST" secondAttribute="leading" id="7LR-FD-N6q"/>
+                            <constraint firstItem="JCQ-6J-LGv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KCC-lf-leq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KL3-Z4-sST" secondAttribute="trailing" id="T8Y-Bv-bJX"/>
+                            <constraint firstItem="JCQ-6J-LGv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dfr-wg-K36"/>
+                            <constraint firstItem="KL3-Z4-sST" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oVf-NC-Y1A"/>
+                            <constraint firstItem="WU1-p3-sdJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uZa-bh-Xtz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerText" destination="WU1-p3-sdJ" id="HTN-4z-zMg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="331"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magic8ball" width="349" height="346"/>
+    </resources>
+</document>
